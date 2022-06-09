@@ -1,494 +1,386 @@
+/* Aplicando Sass en Index */
 /* Estructura General */
+body {
+  font-family: 'Indie Flower', cursive !important; }
 
-body{
-    font-family: 'Indie Flower', cursive !important;
-}
-
-#grilla{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin: 0px;
-}
+#grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 0px; }
 
 /* Header */
+header {
+  background-color: white; }
 
-header{
-    background-color: white;
-}
+.categorias {
+  display: inline-block; }
 
-.iconos{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-}
-
-.categorias, .categorias__menu, .categorias__menu li, .busqueda, .iconos__tienda, .iconos__tienda li{
-    display: inline-block;
-}
-
-.categorias__menu, .iconos__tienda{
-    padding: 0px;
-    margin: 0px;
-}
-
-.categorias__menu li{
+.categorias__menu {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px; }
+  .categorias__menu li {
     margin-right: 80px;
-}
-
-.categorias__menu a{
+    display: inline-block; }
+  .categorias__menu a {
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-size: 1.3em;
     margin: 0px;
-    transition: all 1s;
-}
+    transition: all 1s; }
+    .categorias__menu a:hover {
+      transform: scale(1);
+      color: #fe98a7;
+      background-color: #F9EED3;
+      padding: 5px;
+      border-radius: 15px; }
 
-.categorias__menu a:hover{
-    transform: scale(1);
-    color: #fe98a7;
-    background-color: #F9EED3;
-    padding: 5px;
-    border-radius: 15px;
-}
+.iconos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: nowrap; }
 
-.busqueda{
-    margin-right: 50px;
-    border: 2px solid grey;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+.iconos__tienda {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block; }
+  .iconos__tienda li {
+    display: inline-block;
+    margin: 20px; }
 
-.busqueda input{
+.busqueda {
+  margin-right: 50px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: inline-block; }
+  .busqueda input {
     font-family: 'Indie Flower', cursive;
     height: 25px;
     text-align: left;
     background-color: transparent;
     border: none;
-    margin-left: 4px;
-}
+    margin-left: 4px; }
 
-.busqueda--submit{
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: transparent;
-}
+.busqueda--submit {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent; }
 
-.iconos__tienda li{
-    margin: 20px;
-}
-
-.navbar-collapse{
-    justify-content: flex-end;
-}
+.navbar-collapse {
+  justify-content: flex-end; }
 
 /* Section Productos Destacados - Index */
+#productosDestacados {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
 
-#productosDestacados{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+.titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px; }
+  .titulo h2 {
+    font-size: 1.8em; }
 
-.titulo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px;
-}
+.receta__card {
+  background-color: #F9EED3;
+  padding: 10px;
+  margin: 10px 0px 50px 0px;
+  display: flex;
+  flex-direction: column; }
 
-.titulo h2{
+.contacto--enviar {
+  font-size: 1.2em;
+  font-family: 'Indie Flower', cursive;
+  background-color: #fe98a7;
+  border: none;
+  border-radius: 10px;
+  margin: 5px 10px; }
+
+/* Division de secciones - Index */
+.division {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0px 60px 0px; }
+  .division div {
+    height: 5px;
+    width: 50%;
+    background-color: #2B5970; }
+
+/* Formulario de Contacto - Index */
+#contacto {
+  margin: 0px;
+  background-color: #F9EED3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 0px; }
+
+.formularioContacto {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "contacto ." "nombre ." "nombreInput nombreInput" "email ." "emailInput emailInput" "mensaje ." "mensajeArea mensajeArea" ". enviar";
+  padding: 20px 50px 10px 50px; }
+  .formularioContacto h2 {
     font-size: 1.8em;
-}
+    grid-area: contacto; }
+  .formularioContacto label {
+    font-size: 1.3em; }
 
-.productosDestacados{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+.nombre {
+  grid-area: nombre; }
 
-.productosDestacados__card, .receta__card{
-    background-color: #F9EED3;
-    padding: 10px;
-    margin: 10px 0px 50px 0px;
-    display: flex;
-    flex-direction: column;
-}
+.nombreInput {
+  grid-area: nombreInput; }
 
-.productosDestacados__card h4{
+.email {
+  grid-area: email; }
+
+.emailInput {
+  grid-area: emailInput; }
+
+.mensaje {
+  grid-area: mensaje; }
+
+.mensajeArea {
+  grid-area: mensajeArea; }
+
+#contacto input, #contacto textarea {
+  margin: 10px 0px;
+  border: 2px solid #fe98a7;
+  border-radius: 15px; }
+
+.contacto--enviar {
+  grid-area: enviar; }
+
+/* Footer */
+#footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; }
+
+#footer__minombre {
+  padding-left: 30px; }
+
+#footer__redes {
+  padding-right: 30px; }
+
+.productosDestacados {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.productosDestacados__card {
+  background-color: #F9EED3;
+  padding: 10px;
+  margin: 10px 0px 50px 0px;
+  display: flex;
+  flex-direction: column; }
+  .productosDestacados__card h4 {
     font-size: 1.5em;
-    margin: 20px 0px 0px 10px;
-}
-
-.productosDestacados__card p{
+    margin: 20px 0px 0px 10px; }
+  .productosDestacados__card p {
     font-size: 1.2em;
-    margin: 20px 10px 5px 10px;
-}
-
-.productosDestacados__card button, .contacto--enviar{
+    margin: 20px 10px 5px 10px; }
+  .productosDestacados__card button {
     font-size: 1.2em;
     font-family: 'Indie Flower', cursive;
     background-color: #fe98a7;
     border: none;
     border-radius: 10px;
     margin: 5px 10px;
-}
-
-.productosDestacados__card button{
     width: 40%;
     align-self: center;
-    transition: all 1s;
-}
-
-.productosDestacados__card button:hover{
-    transform: scale(1.2);
-}
-
- /* Division de secciones - Index */
-
- .division{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 10px 0px 60px 0px;    
-}
-
-.division div{
-    height: 5px;
-    width: 50%;
-    background-color: #2B5970;
-}
+    transition: all 1s; }
+    .productosDestacados__card button:hover {
+      transform: scale(1.2); }
 
 /* Shop */
+.navegacionLateral {
+  width: 20%; }
 
-.navegacionLateral{
-    width: 20%;
-}
+.filtros p {
+  margin: 0px; }
 
-.filtros p{
-    margin: 0px;
-}
+.filtros {
+  margin-left: 60px; }
 
-.filtros{
-    margin-left: 60px;
-}
+.filtros h3 {
+  font-size: 1.8em; }
 
-.filtros h3{
-    font-size: 1.8em;
-}
+.filtros__menu, .filtros__menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px; }
 
-.filtros__menu, .filtros__menu ul{
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-}
+.filtros__menu li {
+  font-size: 1.2em; }
 
-.filtros__menu li{
-    font-size: 1.2em;
-}
-
-.filtros__menu ul li{
-    padding-left: 20px;
-    font-size: 1em;
-}
+.filtros__menu ul li {
+  padding-left: 20px;
+  font-size: 1em; }
 
 /* Recetas */
+.receta__card {
+  background-color: #F9EED3;
+  padding: 30px 30px 40px 30px; }
 
-.receta__card{
-    background-color: #F9EED3;
-    padding: 30px 30px 40px 30px;
-}
+.receta___titulo h2 {
+  font-size: 1.8em; }
 
-.receta___titulo h2{
-    font-size: 1.8em;
-}
+.receta__centro {
+  width: 100%; }
 
-.receta__centro{
-    width: 100%;
-}
+.receta__centro--foto {
+  width: 50%; }
 
-.receta__centro--foto{
-    width: 50%;
-}
+.receta__centro--foto img {
+  width: 100%;
+  overflow: hidden; }
 
-.receta__centro--foto img{
-    width: 100%;
-    overflow: hidden;
-}
+.receta__centro--ingredientes {
+  width: 50%;
+  padding-left: 40px; }
 
-.receta__centro--ingredientes{
-    width: 50%;
-    padding-left: 40px;
-}
+.receta__centro--ingredientes h4, .receta__pasoapaso h4 {
+  font-size: 1.5em; }
 
-.receta__centro--ingredientes h4, .receta__pasoapaso h4{
-    font-size: 1.5em;
-}
+.receta__centro--listaIngredientes ul {
+  list-style: none;
+  font-size: 1.2em; }
 
-.receta__centro--listaIngredientes ul{
-    list-style: none;
-    font-size: 1.2em;
-}
+.receta__centro, .receta__centro--listaIngredientes {
+  display: flex;
+  flex-direction: row; }
 
-.receta__centro, .receta__centro--listaIngredientes{
-    display: flex;
-    flex-direction: row;
-}
+.receta__centro--listaIngredientes {
+  width: 100%;
+  justify-content: space-between; }
 
-.receta__centro--listaIngredientes{
-    width: 100%;
-    justify-content: space-between;
-}
-
-.receta__centro--listaIngredientes ul{
-    width: 50%;
-    padding: 0px;
-    margin: 0px;
-}
+.receta__centro--listaIngredientes ul {
+  width: 50%;
+  padding: 0px;
+  margin: 0px; }
 
 /* Deco */
+.decoraciones {
+  width: 44%;
+  background-color: #F9EED3;
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  align-content: center; }
 
-.decoraciones{
-    width: 44%;
-    background-color: #F9EED3;
-    padding: 20px 20px 10px 20px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    align-content: center;
-}
+.decoraciones__sliderFotos {
+  overflow: hidden;
+  height: 200px; }
 
-.decoraciones__sliderFotos{
-    overflow: hidden;
-    height: 200px;
-}
+.decoraciones__sliderFotos img {
+  object-fit: none;
+  object-position: center top; }
 
-.decoraciones__sliderFotos img{
-    object-fit: none;
-    object-position: center top;
-}
+.decoraciones h2 {
+  margin: 0px 0px 20px 0px; }
 
-.decoraciones h2{
-    margin: 0px 0px 20px 0px;
-}
-
-.decoraciones a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.2em;
-    text-align: right;
-}
+.decoraciones a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: right; }
 
 /* Pagina de Ambientacion en Particular */
+.ambientaciones__sliderFotos {
+  background-image: url("/deco/tematicas/harrypotter01.jpeg");
+  height: 800px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center; }
 
-.ambientaciones__sliderFotos{
-    background-image: url("/deco/tematicas/harrypotter01.jpeg");
-    height: 800px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-}
+.ambientaciones h2 {
+  font-size: 1.8em;
+  margin-left: 100px; }
 
-.ambientaciones h2{
-    font-size: 1.8em;
-    margin-left: 100px;
-}
-
-.ambientaciones__texto{
-    padding: 50px 100px 0px 100px;
-}
-
+.ambientaciones__texto {
+  padding: 50px 100px 0px 100px; }
 
 /* Sobre Mi */
+.aboutme__foto {
+  width: 495px;
+  height: 681px; }
 
-.aboutme__foto{
-    width: 495px;
-    height: 681px;
-}
+@media screen and (max-width: 576px) {
+  #navegacion {
+    align-items: flex-end;
+    margin: 10px 0px 30px 0px;
+    justify-content: space-between; }
+  .banners {
+    background-image: url("/images/banner01-mobile.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .banners2 {
+    background-image: url("/images/banner02-mobile.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  #productosDestacados, .cuerpo {
+    display: none; }
+  .carousel-item {
+    width: auto !important;
+    margin-right: -50% !important; }
+  .navegacionLateral {
+    display: none; }
+  .navegacionMobile {
+    margin: 40px 0px 0px 0px; } }
 
-/* Formulario de Contacto - Index */
-
-#contacto{
-    margin: 0px;
-    background-color: #F9EED3;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin: 0px;
-}
-
-.formularioContacto{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: 
-        "contacto ."
-        "nombre ."
-        "nombreInput nombreInput"
-        "email ."
-        "emailInput emailInput"
-        "mensaje ."
-        "mensajeArea mensajeArea"
-        ". enviar";
-    padding: 20px 50px 10px 50px;
-}
-.formularioContacto h2{
-    font-size: 1.8em;
-    grid-area: contacto;
-}
-
-.formularioContacto label{
-    font-size: 1.3em;
-}
-
-.nombre{
-    grid-area: nombre;
-}
-
-.nombreInput{
-    grid-area: nombreInput;
-}
-
-.email{
-    grid-area: email;
-}
-
-.emailInput{
-    grid-area: emailInput;
-}
-
-.mensaje{
-    grid-area: mensaje;
-}
-
-.mensajeArea{
-    grid-area: mensajeArea;
-}
-
-#contacto input, #contacto textarea{
-    margin: 10px 0px;
-    border: 2px solid #fe98a7;
-    border-radius: 15px;
-}
-
-.contacto--enviar{
-    grid-area: enviar;
-}
-
-/* Footer */
-
-#footer{
-    margin-top: 30px;
+@media screen and (min-width: 576px) {
+  #navegacion {
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 10px 0px 30px 0px; }
+  .banners {
+    background-image: url("/images/banner01.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .banners2 {
+    background-image: url("/images/banner02.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  #carouselExampleDark {
+    display: none; }
+  /* Estructura general del resto de las paginas */
+  #shop, #recetas, #deco, #aboutme {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-}
-
-#footer__minombre{
-    padding-left: 30px;
-}
-
-#footer__redes{
-    padding-right: 30px;
-}
-
-@media screen and (max-width: 576px) {
-
-    #navegacion{
-        align-items: flex-end;
-        margin: 10px 0px 30px 0px;
-        justify-content: space-between;
-    }
-
-    .banners{
-        background-image: url("/images/banner01-mobile.jpg");
-        height: 500px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .banners2{
-        background-image: url("/images/banner02-mobile.jpg");
-        height: 500px;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    #productosDestacados, .cuerpo{
-        display: none;
-    }
-
-    .carousel-item{
-        width: auto !important;
-        margin-right: -50% !important;
-    }
-
-    .navegacionLateral{
-        display: none;
-    }
-
-    .navegacionMobile{
-        margin: 40px 0px 0px 0px;
-    }
-}
-
-@media screen and (min-width: 576px) {
-
-    #navegacion{
-        justify-content: space-between;
-        align-items: flex-end;
-        margin: 10px 0px 30px 0px;
-    }
-
-    .banners{
-        background-image: url("/images/banner01.jpg");
-        height: 500px;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .banners2{
-        background-image: url("/images/banner02.jpg");
-        height: 500px;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    #carouselExampleDark{
-        display: none;
-    }
-
-    /* Estructura general del resto de las paginas */
-
-    #shop, #recetas, #deco, #aboutme{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 60px;
-    }
-
-    .cuerpo{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-content: space-around;
-        width: 80%;
-        padding-right: 30px;
-    }
-
-    .navegacionMobile{
-        display: none;
-    }
-}
+    margin-top: 60px; }
+  .cuerpo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    width: 80%;
+    padding-right: 30px; }
+  .navegacionMobile {
+    display: none; } }

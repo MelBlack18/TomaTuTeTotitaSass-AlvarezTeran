@@ -1,0 +1,40 @@
+.productosDestacados{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.productosDestacados__card{
+    background-color: #F9EED3;
+    padding: 10px;
+    margin: 10px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+
+    h4{
+        font-size: 1.5em;
+        margin: 20px 0px 0px 10px;
+    }
+
+    p{
+        font-size: 1.2em;
+        margin: 20px 10px 5px 10px;
+    }
+
+    button{
+        font-size: 1.2em;
+        font-family: 'Indie Flower', cursive;
+        background-color: #fe98a7;
+        border: none;
+        border-radius: 10px;
+        margin: 5px 10px;
+        width: 40%;
+        align-self: center;
+        transition: all 1s;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
