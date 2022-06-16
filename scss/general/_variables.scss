@@ -1,0 +1,11 @@
+@mixin flex ($display,$direction) {
+    display: $display;
+    flex-direction: $direction;
+}
+
+$formatoListas:(
+    style:none,
+    padding:0px,
+    margin:0px,
+    fuente:1.2em
+);

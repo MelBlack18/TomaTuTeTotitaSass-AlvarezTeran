@@ -1,0 +1,32 @@
+@import "general/variables";
+
+.decoraciones{
+    @include flex(flex,column);
+    width: 44%;
+    background-color: #F9EED3;
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 30px;
+    align-content: center;
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-align: right;
+    }
+
+    h2{
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+.decoraciones__sliderFotos{
+    overflow: hidden;
+    height: 200px;
+
+    img{
+        object-fit: none;
+        object-position: center top;
+    }
+}

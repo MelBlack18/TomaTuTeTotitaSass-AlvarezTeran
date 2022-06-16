@@ -1,0 +1,54 @@
+@import "general/variables";
+
+.receta__card{
+    background-color: #F9EED3;
+    padding: 30px 30px 40px 30px;
+    margin: 10px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.receta___titulo h2{
+    font-size: 1.8em;
+}
+
+.receta__centro{
+    @include flex(flex,row);
+    width: 100%;
+}
+
+.receta__centro--foto{
+    width: 50%;
+
+    img{
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.receta__centro--ingredientes{
+    width: 50%;
+    padding-left: 40px;
+
+    h4{
+        font-size: 1.5em; 
+    }
+}
+
+.receta__pasoapaso h4{
+    font-size: 1.5em;
+}
+
+.receta__centro--listaIngredientes{
+    @include flex(flex,row);
+    width: 100%;
+    justify-content: space-between;
+
+    ul{
+        list-style: none;
+        font-size: 1.2em;
+        width: 50%;
+        padding: 0px;
+        margin: 0px;
+    }
+}

@@ -1,0 +1,19 @@
+/* Pagina de Ambientacion en Particular */
+
+.ambientaciones__sliderFotos{
+    background-image: url("/deco/tematicas/harrypotter01.jpeg");
+    height: 800px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.ambientaciones h2{
+    font-size: 1.8em;
+    margin-left: 100px;
+}
+
+.ambientaciones__texto{
+    padding: 50px 100px 0px 100px;
+}

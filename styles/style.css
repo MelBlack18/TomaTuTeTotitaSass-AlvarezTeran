@@ -1,4 +1,4 @@
-/* Aplicando Sass en Index */
+/* Aplicando Sass */
 /* Estructura General */
 body {
   font-family: 'Indie Flower', cursive !important; }
@@ -78,6 +78,11 @@ header {
 .navbar-collapse {
   justify-content: flex-end; }
 
+#navegacion {
+  align-items: flex-end;
+  margin: 10px 0px 30px 0px;
+  justify-content: space-between; }
+
 /* Section Productos Destacados - Index */
 #productosDestacados {
   display: flex;
@@ -91,13 +96,6 @@ header {
   margin-top: 50px; }
   .titulo h2 {
     font-size: 1.8em; }
-
-.receta__card {
-  background-color: #F9EED3;
-  padding: 10px;
-  margin: 10px 0px 50px 0px;
-  display: flex;
-  flex-direction: column; }
 
 .contacto--enviar {
   font-size: 1.2em;
@@ -179,6 +177,58 @@ header {
 #footer__redes {
   padding-right: 30px; }
 
+@media screen and (max-width: 576px) {
+  .banners {
+    background-image: url("/images/banner01-mobile.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .banners2 {
+    background-image: url("/images/banner02-mobile.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  #productosDestacados, .cuerpo {
+    display: none; }
+  .carousel-item {
+    width: auto !important;
+    margin-right: -50% !important; }
+  .navegacionLateral {
+    display: none; }
+  .navegacionMobile {
+    margin: 40px 0px 0px 0px; } }
+
+@media screen and (min-width: 576px) {
+  .banners {
+    background-image: url("/images/banner01.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .banners2 {
+    background-image: url("/images/banner02.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  #carouselExampleDark {
+    display: none; }
+  /* Estructura general del resto de las paginas */
+  #shop, #recetas, #deco, #aboutme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px; }
+  .cuerpo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    width: 80%;
+    padding-right: 30px; }
+  .navegacionMobile {
+    display: none; } }
+
 .productosDestacados {
   display: flex;
   flex-direction: row;
@@ -210,100 +260,95 @@ header {
     .productosDestacados__card button:hover {
       transform: scale(1.2); }
 
-/* Shop */
-.navegacionLateral {
-  width: 20%; }
-
-.filtros p {
-  margin: 0px; }
-
-.filtros {
-  margin-left: 60px; }
-
-.filtros h3 {
-  font-size: 1.8em; }
-
-.filtros__menu, .filtros__menu ul {
-  list-style: none;
-  padding: 0px;
-  margin: 0px; }
-
-.filtros__menu li {
-  font-size: 1.2em; }
-
-.filtros__menu ul li {
-  padding-left: 20px;
-  font-size: 1em; }
-
-/* Recetas */
 .receta__card {
   background-color: #F9EED3;
-  padding: 30px 30px 40px 30px; }
+  padding: 30px 30px 40px 30px;
+  margin: 10px 0px 50px 0px;
+  display: flex;
+  flex-direction: column; }
 
 .receta___titulo h2 {
   font-size: 1.8em; }
 
 .receta__centro {
+  display: flex;
+  flex-direction: row;
   width: 100%; }
 
 .receta__centro--foto {
   width: 50%; }
-
-.receta__centro--foto img {
-  width: 100%;
-  overflow: hidden; }
+  .receta__centro--foto img {
+    width: 100%;
+    overflow: hidden; }
 
 .receta__centro--ingredientes {
   width: 50%;
   padding-left: 40px; }
+  .receta__centro--ingredientes h4 {
+    font-size: 1.5em; }
 
-.receta__centro--ingredientes h4, .receta__pasoapaso h4 {
+.receta__pasoapaso h4 {
   font-size: 1.5em; }
 
-.receta__centro--listaIngredientes ul {
-  list-style: none;
-  font-size: 1.2em; }
-
-.receta__centro, .receta__centro--listaIngredientes {
-  display: flex;
-  flex-direction: row; }
-
 .receta__centro--listaIngredientes {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   justify-content: space-between; }
+  .receta__centro--listaIngredientes ul {
+    list-style: none;
+    font-size: 1.2em;
+    width: 50%;
+    padding: 0px;
+    margin: 0px; }
 
-.receta__centro--listaIngredientes ul {
-  width: 50%;
+.navegacionLateral {
+  width: 20%; }
+
+.filtros {
+  margin-left: 60px; }
+  .filtros p {
+    margin: 0px; }
+  .filtros h3 {
+    font-size: 1.8em; }
+
+.filtros__menu {
+  list-style: none;
   padding: 0px;
   margin: 0px; }
+  .filtros__menu ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px; }
+    .filtros__menu ul li {
+      padding-left: 20px;
+      font-size: 1.2em; }
+  .filtros__menu li {
+    font-size: 1.2em; }
 
-/* Deco */
 .decoraciones {
+  display: flex;
+  flex-direction: column;
   width: 44%;
   background-color: #F9EED3;
   padding: 20px 20px 10px 20px;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 30px;
   align-content: center; }
+  .decoraciones a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: right; }
+  .decoraciones h2 {
+    margin: 0px 0px 20px 0px; }
 
 .decoraciones__sliderFotos {
   overflow: hidden;
   height: 200px; }
-
-.decoraciones__sliderFotos img {
-  object-fit: none;
-  object-position: center top; }
-
-.decoraciones h2 {
-  margin: 0px 0px 20px 0px; }
-
-.decoraciones a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: right; }
+  .decoraciones__sliderFotos img {
+    object-fit: none;
+    object-position: center top; }
 
 /* Pagina de Ambientacion en Particular */
 .ambientaciones__sliderFotos {
@@ -325,62 +370,3 @@ header {
 .aboutme__foto {
   width: 495px;
   height: 681px; }
-
-@media screen and (max-width: 576px) {
-  #navegacion {
-    align-items: flex-end;
-    margin: 10px 0px 30px 0px;
-    justify-content: space-between; }
-  .banners {
-    background-image: url("/images/banner01-mobile.jpg");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .banners2 {
-    background-image: url("/images/banner02-mobile.jpg");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat; }
-  #productosDestacados, .cuerpo {
-    display: none; }
-  .carousel-item {
-    width: auto !important;
-    margin-right: -50% !important; }
-  .navegacionLateral {
-    display: none; }
-  .navegacionMobile {
-    margin: 40px 0px 0px 0px; } }
-
-@media screen and (min-width: 576px) {
-  #navegacion {
-    justify-content: space-between;
-    align-items: flex-end;
-    margin: 10px 0px 30px 0px; }
-  .banners {
-    background-image: url("/images/banner01.jpg");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat; }
-  .banners2 {
-    background-image: url("/images/banner02.jpg");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat; }
-  #carouselExampleDark {
-    display: none; }
-  /* Estructura general del resto de las paginas */
-  #shop, #recetas, #deco, #aboutme {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 60px; }
-  .cuerpo {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: space-around;
-    width: 80%;
-    padding-right: 30px; }
-  .navegacionMobile {
-    display: none; } }
