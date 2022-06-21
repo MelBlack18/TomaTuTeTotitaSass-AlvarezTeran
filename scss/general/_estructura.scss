@@ -261,6 +261,18 @@ header{
         display: none;
     }
 
+    .cuerpoDeco{
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .decoraciones{
+        width: 100%;
+    }
+
     .carousel-item{
         width: auto !important;
         margin-right: -50% !important;
@@ -303,7 +315,7 @@ header{
         margin-top: 60px;
     }
 
-    .cuerpo{
+    .cuerpo, .cuerpoRecetas, .cuerpoDeco{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;

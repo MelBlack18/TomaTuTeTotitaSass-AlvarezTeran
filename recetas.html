@@ -59,27 +59,54 @@
         <main id="recetas">
             
             <aside class="navegacionLateral">
-                <nav class="filtros">
-                    <h3>Filtros</h3>
-                    <ul class="filtros__menu">
-                        <li class="filtros__menu--dulce">Dulce
+                <nav class="filtros dropdown">
+                    <h3 class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Filtros</h3>
+                    
+                    <ul class="filtros__menu dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="filtros__menu--dulce dropdown-item">Dulce
                             <ul class="filtros__submenu--dulce">
-                                <li>Tortas</li>
-                                <li>Tartas</li>
+                                <li class="dropdown-item">Tortas</li>
+                                <li class="dropdown-item">Tartas</li>
                             </ul>
                         </li>
-                        <li class="filtros__menu--salado">Salado
+
+                        <li class="filtros__menu--salado dropdown-item">Salado
                             <ul class="filtros__submenu--salado">
-                                <li>Pizza</li>
-                                <li>Tartas</li>
+                                <li class="dropdown-item">Pizza</li>
+                                <li class="dropdown-item">Tartas</li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </aside>
+
+
+            <section class="navegacionMobile">
+
+                <nav class="filtros dropdown">
+                    <h3 class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Filtros</h3>
+                    
+                    <ul class="filtros__menu dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="filtros__menu--dulce dropdown-item">Dulce
+                            <ul class="filtros__submenu--dulce">
+                                <li class="dropdown-item">Tortas</li>
+                                <li class="dropdown-item">Tartas</li>
+                            </ul>
+                        </li>
+
+                        <li class="filtros__menu--salado dropdown-item">Salado
+                            <ul class="filtros__submenu--salado">
+                                <li class="dropdown-item">Pizza</li>
+                                <li class="dropdown-item">Tartas</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            
+            </section>
             
 
-            <section class="cuerpo">
+            <section class="cuerpoRecetas">
 
                 <article class="receta__card">
 

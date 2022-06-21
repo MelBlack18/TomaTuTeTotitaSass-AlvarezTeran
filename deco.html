@@ -57,21 +57,45 @@
 
         <main id="deco">
 
+
             <aside class="navegacionLateral">
-                <nav class="filtros">
-                    <h3>Filtros</h3>
-                    <ul class="filtros__menu">
-                        <li>Temáticos</li>
-                        <li>De Colores</li>
-                        <li>Naturaleza</li>
-                        <li>Infantiles</li>
+
+                <nav class="filtros dropdown">
+                    <h3 class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Filtros</h3>
+                    
+                    <ul class="filtros__menu dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                        <li class="dropdown-item">Temáticos</li>
+                        <li class="dropdown-item">De Colores</li>
+                        <li class="dropdown-item">Naturaleza</li>
+                        <li class="dropdown-item">Infantiles</li>
+                        
                     </ul>
                 </nav>
+            
             </aside>
+
+            <section class="navegacionMobile">
+
+                <nav class="filtros dropdown">
+                    <h3 class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Filtros</h3>
+                    
+                    <ul class="filtros__menu dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                        <li class="dropdown-item">Temáticos</li>
+                        <li class="dropdown-item">De Colores</li>
+                        <li class="dropdown-item">Naturaleza</li>
+                        <li class="dropdown-item">Infantiles</li>
+                        
+                    </ul>
+                </nav>
+            
+            </section>
+
 
             <!-- Cada Article es un resúmen de la Ambientación -->
 
-            <section class="cuerpo">
+            <section class="cuerpoDeco">
 
                 <article class="decoraciones">
                     <h2>Nombre Deco</h2>

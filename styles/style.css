@@ -1,4 +1,3 @@
-/* Aplicando Sass */
 /* Estructura General */
 body {
   font-family: 'Indie Flower', cursive !important; }
@@ -192,6 +191,14 @@ header {
     background-size: cover; }
   #productosDestacados, .cuerpo {
     display: none; }
+  .cuerpoDeco {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    align-items: center;
+    margin: 0px; }
+  .decoraciones {
+    width: 100%; }
   .carousel-item {
     width: auto !important;
     margin-right: -50% !important; }
@@ -219,7 +226,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 60px; }
-  .cuerpo {
+  .cuerpo, .cuerpoRecetas, .cuerpoDeco {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -326,29 +333,53 @@ header {
   .filtros__menu li {
     font-size: 1.2em; }
 
-.decoraciones {
-  display: flex;
-  flex-direction: column;
-  width: 44%;
-  background-color: #F9EED3;
-  padding: 20px 20px 10px 20px;
-  margin-bottom: 30px;
-  align-content: center; }
-  .decoraciones a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.2em;
-    text-align: right; }
-  .decoraciones h2 {
-    margin: 0px 0px 20px 0px; }
+@media screen and (max-width: 576px) {
+  .decoraciones {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #F9EED3;
+    padding: 20px 10px 10px 10px;
+    margin-bottom: 30px;
+    align-content: center; }
+    .decoraciones a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1.2em;
+      text-align: right; }
+    .decoraciones h2 {
+      margin: 0px 0px 20px 0px; }
+  .decoraciones__sliderFotos {
+    overflow: hidden;
+    height: 200px; }
+    .decoraciones__sliderFotos img {
+      object-fit: none;
+      object-position: center top; } }
 
-.decoraciones__sliderFotos {
-  overflow: hidden;
-  height: 200px; }
-  .decoraciones__sliderFotos img {
-    object-fit: none;
-    object-position: center top; }
+@media screen and (min-width: 576px) {
+  .decoraciones {
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+    background-color: #F9EED3;
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 30px;
+    align-content: center; }
+    .decoraciones a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1.2em;
+      text-align: right; }
+    .decoraciones h2 {
+      margin: 0px 0px 20px 0px; }
+  .decoraciones__sliderFotos {
+    overflow: hidden;
+    height: 200px; }
+    .decoraciones__sliderFotos img {
+      object-fit: none;
+      object-position: center top; } }
 
 /* Pagina de Ambientacion en Particular */
 .ambientaciones__sliderFotos {
