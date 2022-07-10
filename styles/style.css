@@ -221,7 +221,7 @@ header {
   #carouselExampleDark {
     display: none; }
   /* Estructura general del resto de las paginas */
-  #shop, #recetas, #deco, #aboutme {
+  #shop, #recetas, #deco {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -386,11 +386,10 @@ header {
   background-image: url("/deco/tematicas/harrypotter01.jpeg");
   height: 800px;
   width: 100%;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: center; }
+  background-position: center center; }
 
-.ambientaciones h2 {
+.ambientaciones h1 {
   font-size: 1.8em;
   margin-left: 100px; }
 
@@ -398,6 +397,33 @@ header {
   padding: 50px 100px 0px 100px; }
 
 /* Sobre Mi */
-.aboutme__foto {
-  width: 495px;
-  height: 681px; }
+@media screen and (max-width: 799px) {
+  #aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 60px; }
+  .aboutme__encabezado {
+    padding-left: 30px; }
+  .aboutme__foto {
+    width: 495px;
+    height: 681px; }
+  .aboutme__contenido p {
+    padding: 2rem 10px 0px 30px; } }
+
+@media screen and (min-width: 800px) {
+  #aboutme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 60px; }
+  .aboutme__encabezado {
+    padding-left: 20px;
+    width: 60%; }
+  .aboutme__foto {
+    width: 495px;
+    height: 681px; }
+  .aboutme__contenido {
+    width: 40%; }
+    .aboutme__contenido p {
+      padding: 2rem 5px 0px 10px; } }
